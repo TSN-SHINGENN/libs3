@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3E220554-A0BA-4255-9FBB-5D92C5AB259D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>libmpxx</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dbms.h" />
+    <ClInclude Include="libmpxx.h" />
+    <ClInclude Include="libmpxx_revision.h" />
+    <ClInclude Include="mpxx_cl2av.h" />
+    <ClInclude Include="mpxx_conio.h" />
+    <ClInclude Include="mpxx_ctype.h" />
+    <ClInclude Include="mpxx_dlfcn.h" />
+    <ClInclude Include="mpxx_endian.hpp" />
+    <ClInclude Include="mpxx_getopt.h" />
+    <ClInclude Include="mpxx_lite_mallocater.h" />
+    <ClInclude Include="mpxx_lite_sprintf.h" />
+    <ClInclude Include="mpxx_malloc.h" />
+    <ClInclude Include="mpxx_memareacpy.h" />
+    <ClInclude Include="mpxx_pipe.h" />
+    <ClInclude Include="mpxx_process.h" />
+    <ClInclude Include="mpxx_rand.h" />
+    <ClInclude Include="mpxx_sprintf.h" />
+    <ClInclude Include="mpxx_stdarg.h" />
+    <ClInclude Include="mpxx_stdlib.h" />
+    <ClInclude Include="mpxx_stl_deque.h" />
+    <ClInclude Include="mpxx_stl_list.h" />
+    <ClInclude Include="mpxx_stl_queue.h" />
+    <ClInclude Include="mpxx_stl_slist.h" />
+    <ClInclude Include="mpxx_stl_vector.h" />
+    <ClInclude Include="mpxx_string.h" />
+    <ClInclude Include="mpxx_system_execl.h" />
+    <ClInclude Include="mpxx_sys_types.h" />
+    <ClInclude Include="mpxx_time.h" />
+    <ClInclude Include="mpxx_unistd.h" />
+    <ClInclude Include="_stdarg_fmt.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="libmpxx.cpp" />
+    <ClCompile Include="mpxx_cl2av.cpp" />
+    <ClCompile Include="mpxx_conio.cpp" />
+    <ClCompile Include="mpxx_ctype.cpp" />
+    <ClCompile Include="mpxx_dlfcn.cpp" />
+    <ClCompile Include="mpxx_getopt.cpp" />
+    <ClCompile Include="mpxx_lite_mallocater.cpp" />
+    <ClCompile Include="mpxx_lite_sprintf.cpp" />
+    <ClCompile Include="mpxx_malloc.cpp" />
+    <ClCompile Include="mpxx_memareacpy.cpp" />
+    <ClCompile Include="mpxx_pipe.cpp" />
+    <ClCompile Include="mpxx_process.cpp" />
+    <ClCompile Include="mpxx_rand.cpp" />
+    <ClCompile Include="mpxx_sprintf.cpp" />
+    <ClCompile Include="mpxx_stdarg.cpp" />
+    <ClCompile Include="mpxx_stdlib.cpp" />
+    <ClCompile Include="mpxx_stl_deque.cpp" />
+    <ClCompile Include="mpxx_stl_list.cpp" />
+    <ClCompile Include="mpxx_stl_queue.cpp" />
+    <ClCompile Include="mpxx_stl_slist.cpp" />
+    <ClCompile Include="mpxx_stl_vector.cpp" />
+    <ClCompile Include="mpxx_string.cpp" />
+    <ClCompile Include="mpxx_system_execl.cpp" />
+    <ClCompile Include="mpxx_time.cpp" />
+    <ClCompile Include="mpxx_unistd.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

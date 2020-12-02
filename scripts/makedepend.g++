@@ -1,0 +1,40 @@
+depend:
+	@if [ -e Makefile.depend ] ; then \
+		rm Makefile.depend ; \
+	fi
+	@touch Makefile.depend
+	@for SRC in $(SRCS); \
+	do \
+		CMD="g++ -MM $(CFLAGS) $(INC_DIR) $$SRC"; \
+		echo "$$SRC"; \
+		DEP=`$$CMD`; \
+		for INCLUDE_FILE in $$DEP; \
+		do \
+		    case $$INCLUDE_FILE in \
+			*:) \
+			    printf "$$INCLUDE_FILE \\\\\\n" >> Makefile.depend; \
+			    ;; \
+			\\) \
+			    ;; \
+			/usr/include/*) \
+			    ;; \
+			*) \
+			    printf "\t$$INCLUDE_FILE \\\\\\n" >> Makefile.depend; \
+			    ;; \
+		    esac ; \
+		done ; \
+		printf "\\n" >> Makefile.depend; \
+	done
+	@sed -n '1,/^# DO NOT DELETE THIS LINE/p' $(MAKEFILE) > Makefile.new
+	@cat Makefile.depend >> Makefile.new
+	@if [ -e Makefile.new ] ; then\
+		cp Makefile.new $(MAKEFILE) ; \
+		rm Makefile.new ; \
+	fi
+	@if [ -e Makefile.depend ] ; then \
+		rm Makefile.depend ; \
+	fi
+	@if [ -e Makefile.depend.new ] ; then \
+		rm Makefile.depend.new ; \
+	fi
+
